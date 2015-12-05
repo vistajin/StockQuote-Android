@@ -1,0 +1,562 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vista.stockquote.StockDetailsActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TableRow>
+        <TextView
+            android:id="@+id/stockNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="12pt" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="right"
+            android:text="@string/current_price"
+            android:textColor="@color/white"
+            android:textSize="11pt" />
+
+        <TextView
+            android:id="@+id/currentPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="left"
+            android:textSize="11pt" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="1"
+        android:background="@color/black" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:gravity="center_horizontal" >
+
+            <TableLayout
+                android:id="@+id/stockScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="368dp"
+                android:background="@color/black"
+                android:gravity="center_horizontal"
+                android:stretchColumns="yes" >
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/raise_percentage"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/raisePercentageTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/raise_diff"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/raiseDiffTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/highest"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/highestTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lowest"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/lowestTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/open"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/openTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/yesterday_price"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/yesterdayPriceTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <!-- <TableRow> -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:text="@string/deal_vol" -->
+                <!-- android:textSize="8pt" -->
+                <!-- android:textColor="@color/white" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/dealVolTextView" -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:gravity="right" -->
+                <!-- android:paddingRight="@dimen/padding" -->
+                <!-- android:textSize="8pt" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:text="@string/deal_amount" -->
+                <!-- android:textSize="8pt" -->
+                <!-- android:textColor="@color/white" /> -->
+
+
+                <!-- <TextView -->
+                <!-- android:id="@+id/dealAmountTextView" -->
+                <!-- android:layout_width="0dp" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_weight="1" -->
+                <!-- android:gravity="right" -->
+                <!-- android:paddingRight="@dimen/padding" -->
+                <!-- android:textSize="8pt" /> -->
+                <!-- </TableRow> -->
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sell5"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/sell5TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/sell5VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sell4"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/sell4TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/sell4VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sell3"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/sell3TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/sell3VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sell2"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/sell2TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/sell2VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sell1"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/sell1TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/sell1VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/separater"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/buy1"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/buy1TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/buy1VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/buy2"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/buy2TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/buy2VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/buy3"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/buy3TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/buy3VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/buy4"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/buy4TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/buy4VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/buy5"
+                        android:textSize="8pt"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/buy5TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+
+                    <TextView
+                        android:id="@+id/buy5VolTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/padding"
+                        android:textSize="8pt" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/kDiagramButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="openKChart"
+            android:text="@string/k_chart" />
+        
+        <Button
+            android:id="@+id/todayDiagramButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="openTimeChart"
+            android:text="@string/time_chart" />
+        
+        <Button
+            android:id="@+id/refreshButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="refresh"
+            android:text="@string/refresh" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="delete"
+            android:text="@string/delete" />
+
+    </TableRow>
+
+</TableLayout>

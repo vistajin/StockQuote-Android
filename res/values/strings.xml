@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">股票报价</string>
+    <string name="action_settings">设置</string>
+    <string name="stock_symbol">股票代码</string>
+    <string name="ok">确定</string>
+    <string name="delete">删除</string>
+    <string name="view">查看</string>
+    <string name="web">网页</string>
+    <string name="change">修改</string>
+    <string name="cancel">取消</string>
+    <string name="add">添加</string>
+    <string name="stock_list">股票列表</string>
+    <string name="invalid_stock_symbol">股票代码格式不正确！</string>
+    <string name="error_happen">出错啦</string>
+    <string name="clear_list">清空列表</string>
+    <string name="refresh">刷新</string>
+    <string name="confirm_or_not">确定吗？</string>
+    <string name="confirm_to_clear_sotck_list">确定要清空股票列表吗？</string>
+    <string name="confirm_to_delete_sotck">确定要删除该股票吗？</string>
+    <string name="current_price">现价：</string>
+    <string name="raise_diff">涨跌</string>
+    <string name="raise_percentage">涨幅</string>
+    <string name="highest">最高</string>
+    <string name="lowest">最低</string>
+    <string name="open">今开</string>
+    <string name="yesterday_price">昨收</string>
+    <string name="deal_vol">量(手)</string>
+    <string name="deal_amount">金额</string>
+    <string name="update_date_time">更新时间</string>
+    <string name="buy1">买一</string>
+    <string name="buy2">买二</string>
+    <string name="buy3">买三</string>
+    <string name="buy4">买四</string>
+    <string name="buy5">买五</string>
+    <string name="sell1">卖一</string>
+    <string name="sell2">卖二</string>
+    <string name="sell3">卖三</string>
+    <string name="sell4">卖四</string>
+    <string name="sell5">卖五</string>
+    <string name="separater">----------------------------------------</string>
+    <string name="timeout">连接超时或网络连接已断开！</string>
+    <string name="k_chart">K线图</string>
+    <string name="k_daily">日K</string>
+    <string name="k_weekly">周K</string>
+    <string name="k_monthly">月K</string>
+    <string name="k_expand">拉长</string>
+    <string name="k_shorten">缩短</string>
+    <string name="time_chart">分时图</string>
+
+</resources>

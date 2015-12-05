@@ -1,0 +1,62 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/kChart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:contentDescription="@string/k_chart" />
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/dailyKChartButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="dailyKChart"
+            android:text="@string/k_daily" />
+
+        <Button
+            android:id="@+id/weeklyKChartButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="weeklyKChart"
+            android:text="@string/k_weekly" />
+
+        <Button
+            android:id="@+id/monthlyKChartButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="monthlyKChart"
+            android:text="@string/k_monthly" />
+
+        <Button
+            android:id="@+id/expandKChartButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="expandKChart"
+            android:text="@string/k_expand" />
+
+        <Button
+            android:id="@+id/shortenKChartButton"
+            style="android:buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="shortenKChart"
+            android:text="@string/k_shorten" />
+    </TableRow>
+
+</TableLayout>

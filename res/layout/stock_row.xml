@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:focusable="true" >
+
+    <TextView
+        android:id="@+id/stockSymbolTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+    
+    <TextView
+        android:id="@+id/stockNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:textColor="@color/white"
+        android:textSize="8pt" />
+    
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:clickable="false"
+        android:textSize="8pt" />
+    
+    <TextView
+        android:id="@+id/percentageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:clickable="false"
+        android:textSize="8pt" />
+
+<!--     <Button -->
+<!--         android:id="@+id/viewButton" -->
+<!--         style="?android:attr/buttonStyleSmall" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/view" /> -->
+
+<!--     <Button -->
+<!--         android:id="@+id/webButton" -->
+<!--         style="?android:attr/buttonStyleSmall" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:text="@string/web" /> -->
+
+</TableRow>
